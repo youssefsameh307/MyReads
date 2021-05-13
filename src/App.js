@@ -33,14 +33,14 @@ class BooksApp extends React.Component {
   render() {   
     return (
       <div className="app">
-        <Route exact path='/search' render ={()=>(
+        <Route exact path='/MyReads/search' render ={()=>(
           <Search
           shelvedbooks={this.state.books}
           update={this.updatebook}/>
         )}></Route>
         
         
-        <Route exact path='/' render ={()=>(
+        <Route exact path='/MyReads/' render ={()=>(
           <div className="list-books">
             <div className="list-books-title">
               <h1>MyReads</h1>
@@ -67,7 +67,7 @@ class BooksApp extends React.Component {
 
               </div>
             </div>
-            <Link to='/search'>
+            <Link to='/MyReads/search'>
             <div className="open-search">
               <button onClick={() => this.setState({ showSearchPage: true })}>Add a book</button>
             </div>
